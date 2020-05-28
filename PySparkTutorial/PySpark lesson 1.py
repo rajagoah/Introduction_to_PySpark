@@ -10,3 +10,5 @@ spark = SparkSession.builder.getOrCreate()
 #printing to console
 print(spark)
 
+#viewing the tables within the spark context
+print(spark.catalog.listTables())
