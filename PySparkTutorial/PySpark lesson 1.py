@@ -1,14 +1,6 @@
-from pyspark import SparkContext
-from pyspark.sql import SparkSession
+#this code will run only when run on the pyspark201 interpreter in pycharm
+import pyspark
+sc = pyspark.SparkContext("local","PySpark lesson 1")
 
-#creating a spark context
-sc = SparkContext("local","PySpark lesson 1")
+print("done")
 
-#printing to console
-print(sc)
-
-#creating a pyspark session instance
-my_spark = SparkSession.builder.getOrCreate()
-
-#printing to console
-print(my_spark)
