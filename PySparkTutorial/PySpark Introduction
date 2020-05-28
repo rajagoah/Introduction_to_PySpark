@@ -1,0 +1,14 @@
+1. Spark is a platform for parallel computing.
+2. When we have large amounts of data, spark allows us to spread the data across multiple nodes and perform calculations on each subset.
+3. This way, each node works on only a small subset of the dataset.
+4. The spark cluster consists of 1 MASTER node that decides how the data will be split.
+5. The MASTER node will split the data load across WORKER nodes.
+6. We can connect to a spark cluster using an instance of a SparkContext().
+7. An instance of a SparkContext can be used to connect to a spark cluster and create RDD to distribute variables across the clusters.
+8. If SparkContext is a way to connect to the cluster, a SparkSession is an interface to the connection.
+9. When multiple SparkSessions are created, the code causes issues. In order to prevent this we use the SparkSession.builder.getOrCreate() method.
+
+Viewing tables in the spark cluster
+1. After creating the SparkSession we can start viewing the data in the cluster.
+2. To view tables within the spark cluster, we must use the SparkSession attribute called Catalog
+3. Within the Catalog attribute, we must use the listTables() method
