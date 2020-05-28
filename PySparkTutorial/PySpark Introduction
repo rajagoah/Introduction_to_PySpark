@@ -17,3 +17,7 @@ Converting a pandas dataframe to a spark data frame
 1. Create a random dataframe using the numpy random() method.
 2. To convert the dataframe use the 'spark.createDataFrame(<name of pandas dataframe>)' method. Here 'spark' is an instance of SparkSession
 3. Post that, add the spark dataframe to the catalog using the spark_dataframe_name.createOrReplaceTempView('<name of the temp table>') method
+
+To read directly from the file
+1. use the.read.csv() function to read from the path where the file is stored.
+2. use the <name of the csv file>.show() function to show the data within that variable.

@@ -34,4 +34,10 @@ if spark.catalog.listTables() == []:
 else:
     print(spark.catalog.listTables())
 
+####
+# to directly read a csv file we use the .read.csv() function within the sparkSession
 
+file_path = '/Users/aakarsh.rajagopalan/Personal documents/Datasets for tableau/Tableau project dataset/Data_count_state_level.csv'
+superstore = spark.read.csv(file_path)
+
+print(superstore.show())
