@@ -12,3 +12,8 @@ Viewing tables in the spark cluster
 1. After creating the SparkSession we can start viewing the data in the cluster.
 2. To view tables within the spark cluster, we must use the SparkSession attribute called Catalog
 3. Within the Catalog attribute, we must use the listTables() method
+
+Converting a pandas dataframe to a spark data frame
+1. Create a random dataframe using the numpy random() method.
+2. To convert the dataframe use the 'spark.createDataFrame(<name of pandas dataframe>)' method. Here 'spark' is an instance of SparkSession
+3. Post that, add the spark dataframe to the catalog using the spark_dataframe_name.createOrReplaceTempView('<name of the temp table>') method
